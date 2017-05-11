@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item><shape android:shape="rectangle">
+
+            <padding android:bottom="3dp" android:left="4dp" android:right="4dp" android:top="3dp" />
+
+            <corners android:radius="8dp" />
+
+        <solid android:color="@color/chat_publishtime_bg" ></solid>
+
+        </shape></item>
+
+</selector>

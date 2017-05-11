@@ -1,0 +1,174 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/fragment_bg"
+    android:orientation="vertical" >
+
+
+
+
+
+    <include  android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/empty_layout"
+        layout="@layout/list_empty_view"
+        />
+
+
+    <me.maxwin.view.XListView
+        android:id="@+id/chat_lv"
+        android:layout_below="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/send_comment_rl"
+        android:background="@color/fragment_bg"
+        android:cacheColorHint="#00000000"
+        android:listSelector="@drawable/list_item_selector"
+        ></me.maxwin.view.XListView>
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/send_comment_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        >
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/create_envelope_btn"
+            android:id="@+id/startEnvelopeBtn"
+            />
+
+        <go.fast.fastenvelopes.widgets.PasteEditText
+            android:id="@+id/et_sendmessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/startEnvelopeBtn"
+            android:background="@drawable/edit_input_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="请输入内容"
+            android:maxLength="100"
+            android:minHeight="40dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="42dp"
+            android:paddingTop="5dp"
+            android:textSize="18sp" >
+        </go.fast.fastenvelopes.widgets.PasteEditText>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/et_sendmessage"
+            android:layout_alignRight="@+id/et_sendmessage"
+            android:layout_alignTop="@+id/et_sendmessage"
+            android:layout_marginRight="10dp" >
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/send_msg_btn" />
+        </RelativeLayout>
+
+        <View   android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/et_sendmessage"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/numkeyboard_rl"
+        android:background="@color/fragment_bg"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/num_input_rl"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/num_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="24dp"
+                android:ems="10"
+                android:layout_toLeftOf="@+id/send_num_btn"
+                android:inputType="none" >
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送结果"
+                android:id="@+id/send_num_btn"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+
+
+        </RelativeLayout>
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboardview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/num_input_rl"
+            android:layout_marginTop="5.0dp"
+            android:background="#ffffffff"
+            android:focusable="true"
+            android:keyBackground="@color/fragment_bg"
+            android:keyTextColor="@color/envelopes_item_text_color"
+            android:keyTextSize="26.0sp"
+            android:shadowColor="#ffffffff"
+            android:shadowRadius="0.0"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/masking_v"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5f000000" >
+    </View>
+
+    <include layout="@layout/show_envelope_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/envelop_ic"
+        android:visibility="invisible"
+
+        ></include>
+
+    <include layout="@layout/show_free_envelope_layout"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:id="@+id/free_envelop_ic"
+        android:visibility="invisible"
+
+        ></include>
+
+</RelativeLayout>

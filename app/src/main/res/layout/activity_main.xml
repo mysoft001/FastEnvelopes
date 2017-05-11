@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <fragment
+        android:id="@+id/content_fragment_main"
+        android:name="go.fast.fastenvelopes.fragments.MainFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/main_fragment" />
+
+    <fragment
+        android:id="@+id/content_fragment_top"
+        android:name="go.fast.fastenvelopes.fragments.TopBarFragment"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        tools:layout="@layout/fragmentlayout_topbar" />
+
+</RelativeLayout>

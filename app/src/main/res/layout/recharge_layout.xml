@@ -1,0 +1,205 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg"
+     >
+
+    <RelativeLayout
+        android:id="@+id/root_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fragment_bg"
+        tools:context=".CustomTextActivity" >
+
+        <RelativeLayout
+            android:id="@+id/title_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" >
+
+            <TextView
+                android:id="@+id/choosem_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="选择充值金额"
+                android:textColor="@color/graytext"
+                android:textSize="12sp"
+                android:typeface="serif" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="兑换"
+                    android:textColor="@color/graytext"
+                    android:textSize="12sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/gloden_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="10000"
+                    android:textColor="@color/orangetext"
+                    android:textSize="12sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="金币"
+                    android:textColor="@color/graytext"
+                    android:textSize="12sp"
+                    android:typeface="serif" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/chooseMoney_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_rl"
+            android:layout_marginTop="15dp"
+            android:background="#ffffff" >
+
+            <RadioButton
+                android:id="@+id/money_10_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/charge_choosemoney_selector"
+                android:button="@null"
+                android:drawablePadding="20dp"
+                android:drawableRight="@drawable/charge_check_item_selector"
+                android:gravity="center"
+                android:minHeight="60dp"
+                android:padding="12dp"
+                android:text="10元"
+                android:textColor="@drawable/charge_text_selector"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/fragment_bg" />
+
+            <RadioButton
+                android:id="@+id/money_20_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/charge_choosemoney_selector"
+                android:button="@null"
+                android:drawablePadding="20dp"
+                android:drawableRight="@drawable/charge_check_item_selector"
+                android:gravity="center"
+                android:minHeight="60dp"
+                android:padding="12dp"
+                android:text="20元"
+                android:textColor="@drawable/charge_text_selector"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/fragment_bg" />
+
+            <RadioButton
+                android:id="@+id/money_50_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/charge_choosemoney_selector"
+                android:button="@null"
+                android:drawablePadding="20dp"
+                android:drawableRight="@drawable/charge_check_item_selector"
+                android:gravity="center"
+                android:minHeight="60dp"
+                android:padding="12dp"
+                android:text="50元"
+                android:textColor="@drawable/charge_text_selector"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/fragment_bg" />
+
+            <RadioButton
+                android:id="@+id/money_100_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/charge_choosemoney_selector"
+                android:button="@null"
+                android:drawablePadding="20dp"
+                android:drawableRight="@drawable/charge_check_item_selector"
+                android:gravity="center"
+                android:minHeight="60dp"
+                android:padding="12dp"
+                android:text="100元"
+                android:textColor="@drawable/charge_text_selector"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/fragment_bg" />
+
+            <RadioButton
+                android:id="@+id/money_200_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/charge_choosemoney_selector"
+                android:button="@null"
+                android:drawablePadding="20dp"
+                android:drawableRight="@drawable/charge_check_item_selector"
+                android:gravity="center"
+                android:minHeight="60dp"
+                android:padding="12dp"
+                android:text="200元"
+                android:textColor="@drawable/charge_text_selector"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/recharge_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chooseMoney_rg"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="80dp"
+            android:background="#ff6600"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="立即充值"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="8dp"
+            android:text="提示："
+            android:textColor="#999999"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</ScrollView>

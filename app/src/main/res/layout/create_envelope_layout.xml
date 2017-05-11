@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_sc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/new_fragmentbg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginTop="15dp"
+    android:paddingTop="18dp"
+    android:paddingBottom="18dp"
+    android:id="@+id/envelope_type_rl"
+    android:background="@drawable/shape_white_corner_stroke"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/create_envelope_icon"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/envelope_type_tv"
+        android:text="猜金额红包"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/dialog_text_btn_red_bg"
+        android:textSize="18sp" />
+
+</RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:id="@+id/envelope_content_rl"
+            android:background="#fff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_below="@+id/envelope_type_rl"
+            >
+
+            <RelativeLayout
+                android:id="@+id/permission_rl"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                 >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="红包权限"
+                    android:id="@+id/permission_tv"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <go.fast.fastenvelopes.view.NiceSpinner
+                    android:id="@+id/permission_nsp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/permission_tv"
+                    android:gravity="right|center_vertical"
+                    android:hint="请选择谁可以抢红包"
+                    android:paddingLeft="10dp"
+                    android:textSize="12.0sp" >
+                </go.fast.fastenvelopes.view.NiceSpinner>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gold_size_rl"
+            android:layout_below="@+id/permission_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+             >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="参与金币"
+                android:id="@+id/gold_size_tv"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/gold_size_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/gold_size_tv"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dialog_edit_bg_selector"
+                android:gravity="left|center_vertical"
+                android:hint="请输入参与者需要的金币数"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="18dp"
+                android:textColor="#999999"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@null"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/guess_size_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gold_size_rl"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="可猜次数"
+                    android:id="@+id/guess_size_tv"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/guess_size_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/guess_size_tv"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/dialog_edit_bg_selector"
+                    android:gravity="left|center_vertical"
+                    android:hint="请输入每个用户最大可猜次数"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="#999999"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15.0sp" />
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/create_btn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/dialog_postive_text_bg"
+                android:text="支付发起红包"
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:layout_below="@+id/guess_size_rl"
+                android:layout_marginTop="50dp"
+                />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/envelope_content_rl"
+            android:text="参与金币"
+            android:background="#fff"
+            android:paddingTop="100dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/envelope_instruct_tv"
+            android:textColor="@color/title_tab_bg_color"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</ScrollView>

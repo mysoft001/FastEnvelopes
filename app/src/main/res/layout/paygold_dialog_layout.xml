@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff" >
+
+
+    <TextView
+        android:id="@+id/paynow_title"
+        android:layout_width="match_parent"
+        android:background="#ff6600"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/top_rl"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="立即支付"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+    
+    
+    <View  android:layout_width="match_parent"
+        android:layout_below="@+id/paynow_title"
+        android:layout_height="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <go.fast.fastenvelopes.widgets.ForcedTextView
+            android:id="@+id/gold_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="金币提示"
+            android:textColor="#c9c9c9"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/speator_v"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/gold_tv"
+            android:layout_marginTop="10dp"
+            android:background="@color/list_item_driver" />
+
+        <LinearLayout
+            android:id="@+id/orders_detail_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/speator_v"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <go.fast.fastenvelopes.widgets.ForcedTextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="marquee"
+                android:gravity="right"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="使用说明："
+                android:textColor="#c9c9c9"
+                android:textSize="16sp" />
+
+            <go.fast.fastenvelopes.widgets.ForcedTextView
+                android:id="@+id/orders_detail_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:text="充值1000金币"
+                android:textColor="#c9c9c9"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/orders_money_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orders_detail_ll"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+
+        <go.fast.fastenvelopes.widgets.ForcedTextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="marquee"
+            android:gravity="right"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="消费金币数："
+            android:textColor="#c9c9c9"
+            android:textSize="16sp" />
+
+        <go.fast.fastenvelopes.widgets.ForcedTextView
+            android:id="@+id/orders_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="100"
+            android:textColor="@color/envelopes_item_text_color"
+            android:textSize="16sp" />
+            <go.fast.fastenvelopes.widgets.ForcedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="金币"
+                android:textColor="@color/envelopes_item_text_color"
+                android:textSize="16sp" />
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/total_gloden_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orders_money_ll"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal" >
+
+            <go.fast.fastenvelopes.widgets.ForcedTextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="marquee"
+                android:gravity="right"
+                android:layout_gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:text="账户余额："
+                android:textColor="#c9c9c9"
+                android:textSize="16sp" />
+
+            <go.fast.fastenvelopes.widgets.ForcedTextView
+                android:id="@+id/total_gold_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="marquee"
+                android:layout_gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="100"
+                android:textColor="@color/envelopes_item_text_color"
+                android:textSize="16sp" />
+            <go.fast.fastenvelopes.widgets.ForcedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:ellipsize="marquee"
+                android:layout_gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="金币"
+                android:textColor="@color/envelopes_item_text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/recharge_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="12dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/envelopes_text_bg"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="立即充值"
+                android:textColor="@color/envelopes_item_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

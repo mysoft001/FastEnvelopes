@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingTop="10dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+   
+
+            <RelativeLayout
+                android:id="@+id/user_sex_age_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff" >
+
+                <RelativeLayout
+                    android:id="@+id/sex_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/sex"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="性别"
+                        android:textColor="@color/setting_items_text"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/sex_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="男"
+                        android:textColor="@color/cancel_btn_text"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/sex_age_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/sex_rl"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#e3e4e5" />
+
+                <RelativeLayout
+                    android:id="@+id/age_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sex_age_v"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/age"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="年龄"
+                        android:textColor="@color/setting_items_text"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/age_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="21"
+                        android:textColor="@color/cancel_btn_text"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+       
+
+            <RelativeLayout
+                android:id="@+id/notice_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_sex_age_rl"
+                android:layout_marginTop="10dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/notice_in_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                     android:background="#ffffff"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/changepsd"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="通知方式"
+                        android:textColor="@color/setting_items_text"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+                    
+                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="声音和震动"
+                        android:id="@+id/notify_type_tv"
+                        android:layout_alignParentRight="true"
+                     android:textColor="@color/cancel_btn_text"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+                </RelativeLayout>
+                
+                
+                
+
+                <View
+                    android:id="@+id/login_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/notice_in_rl"
+                    android:visibility="gone"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#e3e4e5" />
+
+                <RelativeLayout
+                    android:id="@+id/login_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login_v"
+                    android:layout_marginTop="15dp"
+                    android:background="#ffffff"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/login_icon"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="账号切换"
+                        android:textColor="@color/setting_items_text"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+                </RelativeLayout>
+            </RelativeLayout>
+            
+            
+
+            <RelativeLayout
+                android:id="@+id/feedback_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notice_rl"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/feedback_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:text="问题反馈"
+                    android:textColor="@color/setting_items_text"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

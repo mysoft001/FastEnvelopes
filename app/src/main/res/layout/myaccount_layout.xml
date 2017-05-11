@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_bg"
+        android:fadingEdge="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/title_rl"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/title_tab_bg_color" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="我的余额 (金币)"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/overage_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="left|center_vertical"
+                    android:text="0.00"
+                    android:textColor="#ffffff"
+                    android:textSize="72sp"
+                    android:typeface="serif" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#3f000000"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="12dp"
+                    android:visibility="gone"
+                    android:paddingRight="12dp"
+                    android:paddingTop="8dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="我的佣金 (元)"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/commission_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_horizontal"
+                        android:text="0.00元"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/doing_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/title_rl"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/extract_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="提现"
+                    android:textColor="#57a1eb"
+                    android:textSize="20sp"
+                    android:typeface="serif" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/list_item_driver" />
+
+                <TextView
+                    android:id="@+id/recharge_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="充值"
+                    android:textColor="#fa7c4d"
+                    android:textSize="20sp"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/instruct_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doing_ll"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff" >
+
+                <RelativeLayout
+                    android:id="@+id/commission_detail_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/account"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="佣金明细"
+                        android:textColor="@color/setting_items_text"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="共"
+                            android:textColor="@color/cancel_btn_text"
+                            android:textSize="12sp"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/totalcount_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/cancel_btn_text"
+                            android:textSize="12sp"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="笔"
+                            android:textColor="@color/cancel_btn_text"
+                            android:textSize="12sp"
+                            android:typeface="serif" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/sex_age_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/commission_detail_rl"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#e3e4e5" />
+
+                <RelativeLayout
+                    android:id="@+id/commission_instruct_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sex_age_v"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/account"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="说明"
+                        android:textColor="@color/setting_items_text"
+                        android:textSize="14sp"
+                        android:typeface="serif" />
+                </RelativeLayout>
+            </RelativeLayout>
+            
+            
+            <TextView  android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@+id/instruct_rl"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/graytext"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                android:text="提示：充值的金币会在我的账户中看到。有任何疑问，请反馈给我们。"
+                 />
+            
+            
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

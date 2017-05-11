@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="dialogplus_card_shadow">#D4D4D4</color>
+    <color name="dialogplus_black_overlay">#60000000</color>
+    <color name="memubg_color">#aa000000</color>
+    <color name="living_danmu_left_color">#FFC125</color>
+    <color name="living_danmu_right_color">#ffffff</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="half_color">#30000000</color>
+    <color name="orangetext">#FF9933</color>
+    <color name="graytext">#999999</color>
+    <color name="gray_deeptext">#333333</color>
+    <color name="list_item_driver">#e3e4e5</color>
+    <color name="fragment_bg">#F5F0EB</color>
+    <color name="top_banner_bg">#12B7F5</color>
+    <color name="setting_items_text">#222222</color>
+    <color name="cancel_btn_text">#666666</color>
+    <color name="settingitembg_normal">#1fc2c2c2</color>
+    <color name="settingitembg_press">#6fc2c2c2</color>
+    <color name="writing_time">#6ca3d9</color>
+    <color name="recommend_list_driver_bg">#e3e4e5</color>
+
+    <color name="chat_publishtime_bg">#6f999999</color>
+    <color name="envelopes_item_text_color">#FF4040</color>
+    <color name="setting_item_text_c">#515151</color>
+
+    <color name="title_tab_bg_color">#FF7256</color>
+    <color name="new_fragmentbg">#F5F0EB</color>
+
+    <color name="transparent_color">#00ffffff</color>
+    <color name="login_btn_bg_shape">#ffffee</color>
+    <color name="dialog_text_btn_red_bg">#E55444</color>
+    <color name="shape_text_bg_white">#ffffee</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="white">#FFFFff</color>
+    <color name="transparent">#00FFFFff</color>
+
+
+</resources>

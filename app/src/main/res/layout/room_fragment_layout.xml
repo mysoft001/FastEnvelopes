@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/new_fragmentbg"
+    android:orientation="vertical"
+    android:paddingTop="62dp">
+
+
+    <include
+        android:id="@+id/empty_layout"
+        layout="@layout/list_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <me.maxwin.view.XListView
+        android:id="@+id/list_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/new_fragmentbg"
+        android:cacheColorHint="#00000000"
+        android:listSelector="@drawable/list_item_selector"></me.maxwin.view.XListView>
+
+
+</RelativeLayout>

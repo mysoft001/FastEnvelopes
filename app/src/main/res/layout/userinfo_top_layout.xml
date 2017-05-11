@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_bottom_root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#ffffff" >
+
+    <View
+        android:id="@+id/top_v"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/fragment_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_v"
+        android:layout_below="@+id/top_v"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/keep_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <ImageView
+                    android:id="@+id/keeping_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                     />
+
+                <TextView
+                    android:id="@+id/keeping_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/keeping_iv"
+                    android:gravity="bottom"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="关注"
+                    android:textColor="@color/graytext"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vertial_1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/fragment_bg" />
+
+        <RelativeLayout
+            android:id="@+id/zan_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <ImageView
+                    android:id="@+id/zan_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/zan_btn" />
+
+                <TextView
+                    android:id="@+id/zan_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/zan_iv"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="赞"
+                    android:textColor="@color/graytext"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vertial_2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/fragment_bg" />
+
+        <RelativeLayout
+            android:id="@+id/dongtai_rl"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <ImageView
+                    android:id="@+id/dongtai_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/talking_normal" />
+
+                <TextView
+                    android:id="@+id/dongtai_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/dongtai_iv"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="5dp"
+                    android:text="动态"
+                    android:textColor="@color/graytext"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_v"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/fragment_bg" />
+
+</RelativeLayout>

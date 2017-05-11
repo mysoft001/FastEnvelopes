@@ -1,0 +1,224 @@
+
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/envelope_option_root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/show_envelope_bg"
+ >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/top_info_rl"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/option_ll"
+            android:layout_above="@+id/bottom_v"
+            android:layout_below="@+id/top_v"
+            android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/gold_size_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/gold_size_tv"
+                    android:gravity="bottom"
+                    android:text="8"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/gold_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/gold_size_tv"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="bottom"
+                    android:text="需要金币"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:id="@+id/vertial_1"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/fragment_bg" />
+            <RelativeLayout
+                android:id="@+id/join_size_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/join_size_tv"
+                        android:gravity="bottom"
+                        android:text="8"
+                        android:textColor="#fff"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/join_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_below="@+id/join_size_tv"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="bottom"
+                        android:text="参与人数"
+                        android:textColor="@android:color/white"
+                        android:textSize="11sp" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/delaystart_time_ll"
+            android:layout_toLeftOf="@+id/joinorstart_tv"
+            android:layout_toRightOf="@+id/option_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/delaystart_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="bottom"
+                android:text="4分05秒"
+                android:textColor="@android:color/white"
+                android:textSize="8sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/delaystart_time_r_tv"
+                android:gravity="bottom"
+                android:text="后自动开始"
+                android:textColor="@android:color/white"
+                android:textSize="8sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/joinorstart_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_text_bg_white"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="立即参与"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/guessing_rl"
+            android:layout_toRightOf="@+id/option_ll"
+            >
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/currentuser_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/currentHead_img"
+                    android:src="@drawable/author_head_default"
+
+                    />
+                <TextView
+                    android:id="@+id/currentName_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="小蜜蜂"
+                    android:textColor="#fff"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/currentuser_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/currentAnswer_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="32sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="108.8"
+                    android:textColor="#fff"
+                    />
+                <TextView
+                    android:id="@+id/answer_prepare_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:text="大了"
+                    android:textColor="#FFFF00"
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+</RelativeLayout>

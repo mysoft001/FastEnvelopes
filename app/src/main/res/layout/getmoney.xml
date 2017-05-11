@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg"
+   >
+
+    <LinearLayout
+        android:id="@+id/commission_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="金币总额:"
+            android:textColor="@color/graytext"
+            android:textSize="12sp"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/commission_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_horizontal"
+            android:text="0"
+            android:textColor="@color/orangetext"
+            android:textSize="12sp"
+            android:typeface="serif" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:paddingRight="15dp"
+            android:layout_marginLeft="5dp"
+            android:text="个金币"
+            android:textColor="@color/graytext"
+            android:textSize="12sp"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/getmoney_jiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commission_ll"
+        android:background="#ffffff"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp" >
+
+        <EditText
+            android:id="@+id/getmoney_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入要变现的金币数"
+            android:maxLength="6"
+            android:inputType="number"
+            android:textColorHint="#999999"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    
+     <LinearLayout
+        android:id="@+id/money_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getmoney_jiner"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="预计可到账金额:"
+            android:textColor="@color/graytext"
+            android:textSize="12sp"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_horizontal"
+            android:text="0"
+            android:textColor="@color/orangetext"
+            android:textSize="12sp"
+            android:typeface="serif" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:paddingRight="15dp"
+            android:layout_marginLeft="5dp"
+            android:text="元"
+            android:textColor="@color/graytext"
+            android:textSize="12sp"
+            android:typeface="serif" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/getmoney_type_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/money_ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="收款方式:"
+            android:textColor="@color/graytext"
+            android:textSize="12sp"
+        android:typeface="serif" />
+
+        <go.fast.fastenvelopes.view.NiceSpinner
+            android:id="@+id/moneytype_nsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:paddingRight="5dp"
+            android:hint="请选择收款方式"
+            android:drawablePadding="5dp"
+            android:paddingLeft="10dp"
+            android:textSize="12.0sp" >
+        </go.fast.fastenvelopes.view.NiceSpinner>
+    </LinearLayout>
+ <RelativeLayout
+        android:id="@+id/account_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getmoney_type_ll"
+        android:background="#ffffff"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp" >
+
+        <EditText
+            android:id="@+id/account_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入收款账号"
+            android:textColorHint="#999999"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    
+ 
+ 
+ <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="10sp"
+        android:padding="8dp"
+        android:textColor="#999999"
+        android:text="提示：提现金额大于100元即可申请提现。收款只需输入指定收款方式的账号即可。比如银行卡卡号、支付宝账号等，请不要透露任何账号的密码信息"
+        />
+</RelativeLayout>

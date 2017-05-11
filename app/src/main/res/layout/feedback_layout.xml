@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg" >
+
+
+     <EditText
+        android:id="@+id/input_et"
+        style="@style/input_edit"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/edit_bg_selector"
+        android:gravity="start|top"
+        android:hint="说出您的意见与建议，如果可以，请留下联系方式以便我们后面如果有必要与您沟通的情况下可以联系到您"
+        android:textSize="15sp" />
+
+</RelativeLayout>

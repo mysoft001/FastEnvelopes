@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/send_comment_rl"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentTop="true"
+android:layout_marginBottom="5dp"
+    >
+
+<go.fast.fastenvelopes.widgets.PasteEditText
+    android:id="@+id/et_sendmessage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/edit_input_selector"
+    android:focusable="true"
+    android:maxLines="1"
+    android:focusableInTouchMode="true"
+    android:hint="请输入搜索的好友昵称或账户"
+    android:maxLength="100"
+    android:minHeight="40dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="12dp"
+    android:textColorHint="#c2c2c2"
+    android:textColor="#999999"
+    android:paddingRight="42dp"
+    android:paddingTop="5dp"
+    android:textSize="15sp" >
+</go.fast.fastenvelopes.widgets.PasteEditText>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/et_sendmessage"
+    android:layout_alignRight="@+id/et_sendmessage"
+    android:layout_alignTop="@+id/et_sendmessage"
+    android:layout_marginRight="10dp" >
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/send_msg_btn" />
+</RelativeLayout>
+
+<View   android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:layout_below="@+id/et_sendmessage"
+    />
+</RelativeLayout>

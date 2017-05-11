@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/left_msg_root_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/left_msg_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/author_head_default" />
+
+
+
+        <TextView
+            android:id="@+id/left_msg_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxWidth="200dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/left_msg_iv"
+            android:text="这个想法很不错"
+            android:lineSpacingMultiplier="1.2"
+            android:background="@drawable/left_msg_bg"
+            android:textColor="@color/gray_deeptext"
+            android:textSize="15sp" />
+
+    <ProgressBar
+        android:layout_width="12dp"
+        android:id="@+id/left_progress_pb"
+        android:layout_toRightOf="@+id/left_msg_content_tv"
+        android:layout_centerVertical="true"
+        style="?android:attr/progressBarStyleInverse"
+        android:layout_height="12dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/left_progress_pb"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            >
+            <ImageView
+                android:id="@+id/left_compare_iv"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/answer_big" />
+
+            <TextView
+                android:id="@+id/left_compare_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/left_compare_iv"
+                android:text="大了"
+                android:textColor="@color/gray_deeptext"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">快玩红包</string>
+
+    <string name="back">返回</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="online_config">OnlineConfig</string>
+    <string name="make_crash">Make me crash!!</string>
+    <string name="kv_event">K-V Event</string>
+    <string name="normal_event">Event</string>
+    <string name="event_duration">Value-Type</string>
+    <string name="page_stack">Page in Fragment Stack</string>
+    <string name="page_tabs">Page in Fragment Tabs</string>
+    <string name="social_analytics">Social Analytics</string>
+    <string name="js_in_webview">JS Analytics in Webivew</string>
+    <string name="flush_cache">send cache message ,right now !</string>
+    <string name="signin">signin</string>
+    <string name="signoff">signoff</string>
+    <string name="orderid">Game pay(contains orderid)</string>
+    <string name="event_cc">Categorical Counter Event</string>
+    <string name="input_psd_hint">请输入房间密码</string>
+    <string name="compare_large">大了</string>
+    <string name="compare_little">小了</string>
+    <string name="envelope_guess_instruct_all">所有人都可以抢此红包。点击支付发起后自动开始，不需要其他参与抢红包的人支付参与的金币数。任何房间里的人猜中系统随机的数字（该数字与红包金币数无关）都将获得该红包。</string>
+
+    <string name="envelope_guess_instruct_join">其他参与者只有支付设定的参与金额的金币数才能抢此红包。最后红包的大小取决于参与的人数多少，参与人数越多红包越大。最低需要2人才能成功发起红包。任何参与者输入的数字与系统随机的数字相同都将获得该红包（红包金额=参与人数*参与金额）</string>
+
+
+
+    <string name="day_limit">
+        每天每个用户只能猜10次红包游戏。超出次数无法进行游戏。超出次数需要花费金币才能参与抢红包游戏。用户也可以分享、邀请朋友来获得奖励次数。
+    </string>
+    <string name="guess_instruct">
+玩法说明：
+\n发起者发起一个猜金额红包请求。设定了参与需要的金币数（个人红包无需参与抢的人支付金币），最大参与人数等。当人数大于2后发起红包者可开始红包游戏，若在规定时间内没有点击开始那么倒计时结束人数大于2时会自动开始抢红包游戏。\n系统会随机一个数字。参与的人说出一个金额。系统判断显示大了或者小了，直到猜中为止。
+   \n玩法演示：
+        \n假设参与者每人支付了5金币，共5人参加。
+        \n随后系统随机了一个值：10233
+        \n玩家开始：
+        \n玩家1：82 小了
+        \n玩家3：880 小了
+        \n玩家5：11700 大了
+        \n玩家1：10300 大了
+        \n玩家2：9700 小了
+        \n玩家4：10100 小了
+        \n玩家2：10200 小了
+        \n玩家5：10293 大了
+        \n玩家5：10230小了
+        \n玩家2：10235 大了
+        \n玩家3：10232小了
+        \n玩家1：10233 猜中了！
+        \n玩家1获得全部的25个金币。
+    </string>
+
+    <string name="free_instruct">
+        自由猜红包玩法说明：
+\n随机几个不同金额的红包。请注意每个红包金额（即答案）是该红包总金额随机分配的。所以数字不可能大于红包金额大小。且该红包答案可能为小数。
+每个参与抢红包的人说出一个金额。最接近的那个红包被领走。如果说出的金额大于红包里最大的那个那么所给的答案将变为负值（比如红包中最大金额为12.8 玩家答案：15 那么最后该玩家答案将变为:-2.2(即12.8-15所得出的值)）自动获得红包池里最小的那个红包。
+\n玩法演示：
+\n共5个不同金额红包。
+\n当参与者说出的数字达到5个时本轮结束。
+
+\n给出的5个答案与红包中最大金额比较。如果大于最大金额那么数值为相应的负数。
+\n例如：
+\n5个红包为：3、6、7、12、15
+\n玩家给出的数值为：
+\n玩家1：2.4
+\n玩家2：18
+\n玩家3：9
+\n玩家4：10
+\n玩家5：6
+\n整理后数值：
+\n玩家2：-3（给出的数值超出红包中最大的金额变为负数，通常只能领最小的红包了）
+\n玩家1：2.4
+\n玩家5：6
+\n玩家3：9
+\n玩家4：10
+\n分配红包结果：3、6、7、12、15
+\n玩家2：3
+\n玩家1：6
+\n玩家5：7
+\n玩家3：12
+\n玩家4：15
+\n（如果有两个数值或以上一样那么取最先说出的）
+    </string>
+
+    <string name="near_instruct">近者得红包玩法说明：
+\n预先设置一个数字或者是红包的金额数为一个基准数值。每个人说一个金额，最接近的得。多人相同那么平分红包金额。
+\n玩法说明：
+\n红包金额或者系统随机的值为：18
+\n玩家开始：
+\n玩家1：88
+\n玩家2：19
+\n玩家3：10
+\n玩家4：19
+\n玩家5：17
+\n计算可得：玩家2、4、5都最接近平分金币。无法平均（无法整除）先给出答案的玩家多得整除后的余额。
+    </string>
+</resources>

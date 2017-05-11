@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fafbfc"
+     >
+
+    <TextView
+        android:id="@+id/male_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="男"
+        android:textColor="@color/writing_time"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/speator1_v"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/male_tv"
+        android:background="#e2e3e3" />
+
+    <TextView
+        android:id="@+id/female_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/speator1_v"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="女"
+        android:textColor="@color/writing_time"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/speator2_v"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/female_tv"
+        android:background="#e2e3e3" />
+
+    <View
+        android:id="@+id/speator3_v"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/speator2_v"
+        android:layout_marginTop="10dp"
+        android:background="#e2e3e3" />
+
+    <TextView
+        android:id="@+id/changesex_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/speator3_v"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="取消"
+        android:textColor="@color/cancel_btn_text"
+        android:textSize="20sp" />
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "go.fast.fastenvelopes"
+        multiDexEnabled true
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 3
+        versionName "1.0.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders =
+                [
+                GETUI_APP_ID : "DwYL9PL2V09HbyhIKG3fC",
+                GETUI_APP_KEY : "PEBRfs9lb092t7fbiG8fY2",
+                GETUI_APP_SECRET : "MRtEPuAsig8cLZjFbQQ529"
+               ]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64", "x86"
+        }
+
+        packagingOptions {
+            exclude 'assets/getui_popup_bg.9.png'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+
+        signingConfigs {
+            debug {
+                storeFile file('debug.keystore')
+                storePassword "888888"
+                keyAlias "han"
+                keyPassword "888888"
+            }
+        }
+
+    }
+
+
+
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: '*.jar', exclude: 'android-support-*.jar')
+    compile files('libs/GetuiSDK2.9.5.0.jar')
+    compile 'com.android.support:support-v4:+'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    testCompile 'junit:junit:4.12'
+}

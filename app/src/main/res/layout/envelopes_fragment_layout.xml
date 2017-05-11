@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/envelope_fragment_bg"
+    android:orientation="vertical" >
+
+
+
+
+      <me.maxwin.view.XListView
+        android:id="@+id/list_lv"
+        android:layout_below="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          android:scrollbars="none"
+          android:layout_alignParentBottom="true"
+          android:cacheColorHint="#00000000"
+            android:listSelector="@drawable/list_item_selector"
+        ></me.maxwin.view.XListView>
+
+
+</RelativeLayout>

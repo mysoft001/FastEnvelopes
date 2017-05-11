@@ -1,0 +1,217 @@
+
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/free_envelope_option_root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@drawable/show_envelope_bg"
+ >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/free_top_info_rl"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/free_option_ll"
+            android:layout_above="@+id/bottom_v"
+            android:layout_below="@+id/top_v"
+            android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/free_gold_size_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/free_gold_size_tv"
+                    android:gravity="bottom"
+                    android:text="8"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/free_gold_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/free_gold_size_tv"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="bottom"
+                    android:text="红包总金额"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:id="@+id/vertial_1"
+            android:layout_width="1px"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/fragment_bg" />
+            <RelativeLayout
+                android:id="@+id/free_envelope_size_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/free_envelope_size_tv"
+                        android:gravity="bottom"
+                        android:text="8"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/join_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_below="@+id/free_envelope_size_tv"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="bottom"
+                        android:text="红包个数"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/free_join_size_ll"
+            android:layout_marginLeft="12dp"
+            android:layout_above="@+id/free_delaystart_time_ll"
+            android:layout_below="@+id/free_option_ll"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="bottom"
+                android:text="已有"
+                android:id="@+id/free_join_left_size_tv"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="bottom"
+                android:id="@+id/free_join_size_tv"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="bottom"
+                android:text="人参与领取"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/free_delaystart_time_ll"
+     android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/free_answer_list_rl"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/free_delaystart_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="bottom"
+                android:text="00分00秒"
+                android:textColor="@android:color/white"
+                android:textSize="8sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="bottom"
+                android:id="@+id/free_delaystart_r_tv"
+                android:text="后自动开始发奖"
+                android:textColor="@android:color/white"
+                android:textSize="8sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/free_answer_list_rl"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/free_option_ll"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:text="参与列表"
+                android:id="@+id/free_answer_tv"
+                android:textColor="@color/yellow"
+                android:textSize="13sp" />
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/free_answer_tv"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:id="@+id/free_answer_lv"
+            ></ListView>
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/free_instruct_tv"
+            android:layout_toRightOf="@+id/free_option_ll"
+            android:textColor="#fff"
+            android:textSize="18sp"
+android:text="输入金额参与"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        </RelativeLayout>
+</RelativeLayout>

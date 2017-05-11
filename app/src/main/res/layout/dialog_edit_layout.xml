@@ -1,0 +1,89 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:id="@+id/root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    tools:context=".CustomTextActivity" >
+
+    <go.fast.fastenvelopes.widgets.PasteEditText
+        android:id="@+id/input_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/chat_edit_normal"
+        android:maxLines="3"
+        android:minHeight="50dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:textSize="18sp" >
+    </go.fast.fastenvelopes.widgets.PasteEditText>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignBottom="@+id/input_et"
+        android:layout_alignRight="@+id/input_et"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        >
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentcount_tv"
+            android:textSize="10sp"
+            android:textColor="#999999"
+            android:text="8"
+            />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="/"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+             android:textColor="#999999"
+            />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:id="@+id/totalcount_tv"
+             android:textColor="#999999"
+            android:text="25"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/editsend_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_et"
+        android:layout_marginTop="10dp"
+        android:background="@color/settingitembg_normal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="确定"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/editcancel_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editsend_tv"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/settingitembg_normal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="取消"
+        android:textSize="20sp" />
+
+</RelativeLayout>
+</ScrollView>

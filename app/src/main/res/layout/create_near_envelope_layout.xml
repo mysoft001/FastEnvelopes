@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_sc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/new_fragmentbg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginTop="15dp"
+    android:paddingTop="18dp"
+    android:paddingBottom="18dp"
+    android:id="@+id/envelope_type_rl"
+    android:background="@drawable/shape_white_corner_stroke"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/my_envelope_icon"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/envelope_type_tv"
+        android:text="近者得红包"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/dialog_text_btn_red_bg"
+        android:textSize="18sp" />
+
+</RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="#fff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_below="@+id/envelope_type_rl"
+            >
+
+
+
+        <RelativeLayout
+            android:id="@+id/gold_size_rl"
+            android:layout_below="@+id/permission_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+             >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="红包金额"
+                android:gravity="right"
+                android:id="@+id/gold_size_tv"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/gold_size_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/gold_size_tv"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dialog_edit_bg_selector"
+                android:gravity="left|center_vertical"
+                android:hint="请输入红包大小"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="18dp"
+                android:textColor="#999999"
+                android:textColorHint="#999999"
+                android:textCursorDrawable="@null"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/max_join_rl"
+                android:layout_below="@+id/gold_size_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="最大参与人数"
+                    android:gravity="right"
+                    android:id="@+id/max_join_tv"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/max_join_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/max_join_tv"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/dialog_edit_bg_selector"
+                    android:gravity="left|center_vertical"
+                    android:hint=""
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="#999999"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15.0sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/answer_setting_rl"
+                android:layout_below="@+id/max_join_rl"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/answer_option_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/answer_text_tv"
+                        android:text="红包答案"
+                        android:gravity="right"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/answer_rg"
+android:layout_toRightOf="@+id/answer_text_tv"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="12dp"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="本人设定"
+                            android:textColor="#333333"
+                            android:id="@+id/myself_rb"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="系统随机"
+                            android:textColor="#333333"
+                            android:id="@+id/random_rb"
+                            />
+
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/answer_myselfset_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/answer_option_rl"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/dialog_edit_bg_selector"
+                    android:gravity="left|center_vertical"
+                    android:hint="请输入获得红包的答案"
+                    android:inputType="numberDecimal"
+                    android:maxLength="12"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="#999999"
+                    android:textColorHint="#999999"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15.0sp" />
+
+
+            </RelativeLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:id="@+id/total_person_size_ll"
+               android:layout_below="@+id/answer_setting_rl"
+               android:layout_marginTop="30dp"
+               >
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:text="当前房间共"
+                   android:textColor="@color/graytext"
+                   android:textSize="11sp" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:id="@+id/total_person_tv"
+                   android:text="8"
+                   android:textColor="@color/graytext"
+                   android:textSize="12sp" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:text="人"
+                   android:textColor="@color/graytext"
+                   android:textSize="11sp" />
+
+           </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/create_btn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/dialog_postive_text_bg"
+                android:text="支付发起红包"
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:layout_below="@+id/total_person_size_ll"
+                android:layout_marginTop="80dp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

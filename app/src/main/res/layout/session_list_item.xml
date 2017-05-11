@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingTop="15dp" >
+
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/headimg_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/author_head_default" />
+
+        <ImageView
+            android:id="@+id/sex_iv"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@+id/headimg_iv"
+            android:layout_alignRight="@+id/headimg_iv"
+            android:scaleType="fitXY"
+            android:src="@drawable/author_head_default" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/nick_content_rl"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/publishtime_tv"
+            android:layout_toRightOf="@id/headimg_iv"
+            android:layout_centerVertical="true"
+            >
+            <go.fast.fastenvelopes.widgets.ForcedTextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:gravity="bottom"
+                android:maxWidth="160dp"
+                android:singleLine="true"
+                android:text="清风飘雪"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+            <ImageView
+                android:id="@+id/level_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_toRightOf="@+id/name_tv"
+                android:layout_alignBottom="@+id/name_tv"
+                android:layout_marginBottom="3dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/level1_icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_tv"
+                android:layout_marginTop="8dp"
+                >
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/message_icon" />
+
+
+                <go.fast.fastenvelopes.widgets.ForcedTextView
+                    android:id="@+id/lastcontent_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="true"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="bottom"
+                    android:singleLine="true"
+                    android:text="这是一个聊天信息"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/publishtime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/nick_content_rl"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="昨天"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/list_item_driver"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+android:layout_below="@+id/title_rl"
+        ></View>
+
+</RelativeLayout>
